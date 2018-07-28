@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Pacifico|Source+Sans+Pro|Nanum+Gothic+Coding:400');
+  //font-family: 'Josefin Sans', sans-serif;
+  //font-family: 'Pacifico', cursive;
+  //font-family: 'Open Sans', sans-serif;
+  // font-family: 'Source Sans Pro', sans-serif;
+  // Nanum Gothic Coding;
+
+@import url('https://use.fontawesome.com/releases/v5.2.0/css/all.css');
+
+$light-blue: #546DFF;
+$dark-blue: #152CB2;
+$medium-blue: #3755FF;
+$medium-gray: #555;
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: linear-gradient($light-blue, $medium-blue);
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  & #logo {
+    height: 80px;
+    position: absolute;
+  }
+
+  & h1, h2 {
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    color: white;
+    text-shadow: 2px 2px black;
+    animation: 3s ease-out 0s 1 fadein;
+  }
+
+  & h1 {
+    font-family: 'Josefin Sans', sans-serif;
+  }
+
+  & h2 {
+    font-family: 'Pacifico', cursive;
+    top: 40px;
+  }
+
+  & #hamburger {
+    position: absolute;
+    right: 20px;
+    height: 50%;
+    top: 20%;
+  }
+}
+// ------------- end of header --------------
+
+nav {
+  width: 150px;
+  background: linear-gradient($medium-blue, $dark-blue);
+  position: fixed;
+  right: 0;
+  top: 80px;
+
+  & a {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: 2px 2px black;
+    font-size: 120%;
+    border-bottom: solid 1px $dark-blue;
+    transition: all ease-out .5s;
+
+    &:hover {
+      background-color: $light-blue;
+    }
+  }
+}
+
+#nav {
+  &.hidden {
+    right: -160px;
+    transition: 500ms;
+  }
+
+  &.visible {
+    right: 0;
+    transition: 500ms;
+  }
+
+  & a.currentPage {
+    background-color: red;
+  }
+}
+// ------------- end of nav bar --------------
+
+article {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 145%;
+  & img, video, iframe {
+    max-width: 100%;
+  }
+}
+
+// ------------- end of article ------------
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  background-color: rgba(255, 255, 255, 0.71);
+  text-align: center;
+  font-size: 25px;
+
+  & a {
+    color: $medium-gray;
+    text-decoration: none;
+    letter-spacing: 15px;
+  }
+}
+// --------------- end of footer -------------
+
+// -------------- wide screen ----------------
+@media screen and (min-width:500px) {
+  #hamburger {
+    display:none;
+  }
+  #nav {
+    right: 0;
+  }
+  article {
+    padding: 90px 160px 60px 20px;
+  }
+}
+
+@media screen and (max-width:499px) {
+  #hamburger {
+    display: block;
+  }
+  #nav {
+   right: -160px;
+  }
+  article {
+    padding: 90px 20px 60px 20px;
+  }
+}
+
+
+
+
+
+
+
+
