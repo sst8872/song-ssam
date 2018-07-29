@@ -6,3 +6,40 @@ block title
 block content
   h1
     | Coding
+  code.
+     // Event listener for clicking hamburger menu
+     document.getElementById('hamburger').addEventListener('click', function(){
+       // Swap visible / hidden hamburgers
+       var classApplied = document.getElementById('nav').className;
+       if(classApplied === 'visible') {
+          document.getElementById('nav').className = 'hidden';
+       } else {
+           document.getElementById('nav').className = 'visible';
+       }
+     });
+  br
+  br
+  br
+
+  h1 Learn VS Code
+  div(style='text-align:center;margin: 2em;')
+
+  ul.video
+    li
+      iframe(title="4형식 문장 (4형식 동사) (핵심정리 123)" width="640" height="360" src="http://tv.kakao.com/embed/player/cliplink/49540337?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no" allow="autoplay")
+
+  ul.download
+    li
+      a(href='CollectionItems.zip', download='') Download Sample Data
+    li
+      a(href='images.zip', download='') Download Sample Pictures
+    li
+      a(href='AlanSourceCode.zip', download='') Download Alan's Code
+
+  ul.thumbsup
+    li Cotton candy jelly sweet muffin.
+    li
+      | Pudding bear claw cheesecake gummies marshmallow croissant chocolate cake gummies.
+    li Dragée apple pie powder gingerbread lemon drops croissant.
+
+
