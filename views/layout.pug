@@ -7,14 +7,14 @@ html(lang="en")
             block title
               title English & Coding
 
-            link(rel="stylesheet", href="assets/css/style.css")
+            link(rel="stylesheet", href="/assets/css/style.css")
       body
         header
-            img(src='assets/images/logo.png' id='logo' alt='Song Sung Tae' title='S' +
+            img(src='/assets/images/logo.png' id='logo' alt='Song Sung Tae' title='S' +
             'ong Sung Tae')
             h1 Main Title
             h2 Subtitle
-            img(src='assets/images/hamburger.png' id="hamburger"  alt="menu" title='click here for menu')
+            img(src='/assets/images/hamburger.png' id="hamburger"  alt="menu" title='click here for menu')
 
         nav(id="nav")
           a(href="/" id="home") Home
@@ -22,6 +22,9 @@ html(lang="en")
           a(href="/words") Words
           a(href="/coding") Coding
           a(href="/contact") Contact
+
+        div(id="home-login")
+          block login
 
         article
           block content
@@ -38,6 +41,6 @@ html(lang="en")
           a(href="#")
            i(class="fab fa-pinterest-p" title="Google+")
 
-        script(type="text/javascript" src="assets/src/main.js")
+        script(type="/text/javascript" src="assets/src/main.js")
 
 

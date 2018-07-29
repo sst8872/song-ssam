@@ -73,6 +73,31 @@ nav {
 #nav a.currentPage {
   background-color: #697eff; }
 
+#home-login {
+  display: block;
+  float: right;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 300000; }
+  #home-login ul {
+    list-style-type: none; }
+    #home-login ul li {
+      font-family: "Josefin Sans", sans-serif;
+      display: inline-block;
+      text-align: center; }
+      #home-login ul li a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid #ff91a0;
+        background-color: #546DFF;
+        padding: 5px;
+        transition: all .5s ease-out; }
+      #home-login ul li a:hover {
+        background: #152CB2; }
+
 article {
   font-family: "Open Sans", sans-serif;
   line-height: 145%; }
@@ -147,6 +172,40 @@ div.cards256 {
     z-index: 98;
     background: rgba(0, 0, 0, 0.8);
     text-align: center; }
+
+#log-in {
+  background: #ff5353;
+  padding: 20px 10px;
+  margin-bottom: 20px; }
+  #log-in ul {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0; }
+  #log-in li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px 0 0; }
+  #log-in a {
+    color: #fff;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    padding: 10px;
+    display: block; }
+
+#google {
+  margin-top: 50px; }
+  #google main {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 10px;
+    color: #333; }
+    #google main .google-btn {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px;
+      background: #ff5353; }
 
 footer {
   position: fixed;

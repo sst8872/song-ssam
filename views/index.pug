@@ -1,4 +1,13 @@
 extends ./layout
+
+
+block login
+  ul
+    li
+      a(href="/auth/login") Login
+    li
+      a(href="/auth/logout") Logout
+
 block content
   div(class="cards256")
     a(href="/")

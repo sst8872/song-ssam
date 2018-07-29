@@ -8,6 +8,8 @@ $light-blue: #546DFF;
 $dark-blue: #152CB2;
 $medium-blue: #3755FF;
 $medium-gray: #555;
+$white: #fff;
+$red-button: #ff5353;
 
 // -------- fonts --------
 $Josefin: 'Josefin Sans', sans-serif;
@@ -15,6 +17,9 @@ $Pacifico: 'Pacifico', cursive;
 $Open-sans: 'Open Sans', sans-serif;
 $Source: 'Source Sans Pro', sans-serif;
 $Nanum: 'Nanum Gothic Coding', sans-serif;
+
+// --------- font-size -------------
+$log-in-font: 18px;
 
 
 @keyframes fadein {
@@ -116,6 +121,48 @@ nav {
     background-color: #697eff;
   }
 }
+// ------------- home log in -----------------
+#home-login {
+  display: block;
+  float: right;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  background-color: rgba(255,255,255, 0);
+  z-index: 300000;
+
+  & ul {
+    list-style-type: none;
+
+    & li {
+      font-family: $Josefin;
+      display: inline-block;
+      text-align: center;
+
+      & a {
+        display: block;
+        color: $white;
+        text-decoration: none;
+        border: 1px solid #ff91a0;
+        background-color: $light-blue;
+        padding: 5px;
+        transition: all .5s ease-out;
+      }
+
+      & a:hover {
+        background: $dark-blue;
+      }
+
+    }
+
+  }
+
+
+
+
+
+}
+
 // ------------- end of nav bar --------------
 
 article {
@@ -218,10 +265,60 @@ div.cards256 {
 }
 // ------------- cards256 ends --------------
 ul {
-  &.video,
-  &.download,
-  &.thumbsup {
+  & .video,
+  & .download,
+  & .thumbsup {
 
+  }
+}
+
+// ------------- log-in --------------------
+#log-in {
+  background: $red-button;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+
+  & ul {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  & li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+
+  & a {
+    color: $white;
+    font-size: $log-in-font;
+    background: rgba(255,255,255,.2);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+
+}
+// ------------- log-in ends ---------------
+
+// -------------- google+ starts ------------
+#google {
+  margin-top: 50px;
+
+  & main {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 10px;
+    color: #333;
+
+    & .google-btn {
+      color: $white;
+      text-decoration: none;
+      font-size: $log-in-font;
+      padding: 10px;
+      background: $red-button;
+    }
   }
 }
 
