@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+const port = process.env.PORT || 3000;
 
 app.set('view engine', 'pug');
 if (app.get('env') === 'development') {
@@ -32,6 +32,6 @@ app.get('/contact', (req, res) => {
     res.render('contact/contact');
 });
 
-app.listen(3000, () => {
-    console.log('Server running at port 3000!');
+app.listen(port, () => {
+    console.log(`Server running at ${port}`);
 });

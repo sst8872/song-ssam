@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass public/sass/main.scss public/css/style.css -w"
+    "compile:sass": "node-sass public/sass/main.scss public/css/style.css -w",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
