@@ -46,7 +46,7 @@ app.use('/profile', profileRoute);
 
 // home route
 app.get('/', (req, res) => {
-    res.render('index');
+    res.render('index', { user: req.user });
 });
 
 // grammar route

@@ -1,12 +1,15 @@
 extends ./layout
 
-
 block login
   ul
+    if user
+      li
+        a(href="/auth/logout") Logout
+    else
+      li
+        a(href="/auth/login") Login
     li
-      a(href="/auth/login") Login
-    li
-      a(href="/auth/logout") Logout
+      a(href="/profile") Profile
 
 block content
   div(class="cards256")
