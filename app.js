@@ -2,10 +2,18 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const authRoutes = require('./routes/auth-routes');
+const passportSetup = require('./config/passport-setup');
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
 const port = process.env.PORT || 3000;
 
 // set up view engine
 app.set('view engine', 'pug');
+
+// connect to mongodb
+mongoose.connect(keys.mongodb.dbURI, () => {
+   console.log('connected to mongodb');
+});
 
 // pug prettify
 if (app.get('env') === 'development') {
