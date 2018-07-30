@@ -8,5 +8,10 @@ module.exports = {
 
     mongodb: {
         dbURI: "mongodb://songsungtae:ekadl0217@ds259351.mlab.com:59351/authentification"
+    },
+
+    session: {
+        cookieKey: 'songisbusytryingsurvive'
     }
+
 };
