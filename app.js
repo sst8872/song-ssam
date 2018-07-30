@@ -3,6 +3,10 @@ const app = express();
 const path = require('path');
 const authRoutes = require('./routes/auth-routes');
 const profileRoute = require('./routes/profile-routes');
+const grammarRoutes = require('./routes/grammar-routets');
+const codingRoutes = require('./routes/coding-routes');
+const wordsRoutes = require('./routes/words-routs');
+const contactRoutes = require('./routes/contact-routes');
 const passportSetup = require('./config/passport-setup');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
@@ -43,31 +47,16 @@ app.use('/', (req, res, next) => {
 // set up route
 app.use('/auth', authRoutes);
 app.use('/profile', profileRoute);
+app.use('/grammar', grammarRoutes);
+app.use('/coding', codingRoutes);
+app.use('/words', wordsRoutes);
+app.use('/contact', contactRoutes);
 
 // home route
 app.get('/', (req, res) => {
     res.render('index', { user: req.user });
 });
 
-// grammar route
-app.get('/grammar', (req, res) => {
-    res.render('grammar/grammar');
-});
-
-// words route
-app.get('/words', (req, res) => {
-    res.render('words/words');
-});
-
-// coding route
-app.get('/coding', (req, res) => {
-    res.render('coding/coding');
-});
-
-// contact route
-app.get('/contact', (req, res) => {
-    res.render('contact/contact');
-});
 
 
 app.listen(port, () => {
