@@ -2,7 +2,7 @@
   "name": "song-ssam",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "compile:sass": "node-sass public/sass/main.scss public/css/style.css -w",
     "start": "node app.js"
