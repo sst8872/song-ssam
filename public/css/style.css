@@ -207,6 +207,16 @@ div.cards256 {
       padding: 10px;
       background: #ff5353; }
 
+/* ----- links ----- */
+#grammarLink {
+  display: inline-block;
+  color: red;
+  font-size: 30px;
+  text-decoration: none;
+  margin: 100px;
+}
+
+
 footer {
   position: fixed;
   bottom: 0;
