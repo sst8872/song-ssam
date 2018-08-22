@@ -2,8 +2,16 @@ extends ../layout
 
 block title
   title Grammar
+
 block content
-  h1
-    | Study &
-    | Understand Grammar
-    | Quiz~
+  h1 Enjoy your quiz!
+
+  .timeCounter
+  #status
+
+  h2#test_status
+  #test
+
+  script(type="text/javascript" src="/assets/src/quiz.js")
+  script(type="text/javascript" src="/assets/src/q_list.js")
+

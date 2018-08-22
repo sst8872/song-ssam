@@ -22,8 +22,6 @@ app.use('/', (req, res, next) => {
     console.log('Request url: ' + req.url);
     next();
 });
-
-
 app.use('/grammar', grammarRoutes);
 app.use('/coding', codingRoutes);
 app.use('/words', wordsRoutes);
