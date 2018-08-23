@@ -11,4 +11,10 @@ router.get('/quiz', (req,res) => {
 });
 
 
+// grammar lectures gallery
+router.get('/lectures', (req,res) => {
+    res.render('grammar/lectures');
+});
+
+
 module.exports = router;

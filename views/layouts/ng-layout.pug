@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+html(lang="en" ng-app="lectures")
+      head
+            meta(charset="UTF-8")
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            meta(http-equiv="X-UA-Compatible", content="ie=edge")
+            block title
+              title English & Coding
+            <!-- Bootstrap css -->
+            link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+            <!-- Our css -->
+            link(rel="stylesheet", href="/assets/css/ng_quiz.css")
+            link(rel="stylesheet", href="/assets/css/style.css")
+
+      body
+        header
+            img(src='/assets/images/logo.png' id='logo' alt='Song Sung Tae' title='Song Sung Tae')
+            h1 Main Title
+            h2 Subtitle
+            img(src='/assets/images/hamburger.png' id="hamburger"  alt="menu" title='click here for menu')
+
+        nav(id="nav")
+          a(href="/" id="home") Home
+          a(href="/grammar") Grammar
+          a(href="/words/power") Words
+          a(href="/coding/everyone") Coding
+          a(href="/contact") Contact
+
+        div(id="home-login")
+          block login
+
+        article
+          block content
+
+        footer
+          a(href="#")
+           i(class="fab fa-facebook-f" title="Facebook")
+          a(href="#")
+           i(class="fab fa-twitter" title="Twitter")
+          a(href="#")
+           i(class="fab fa-linkedin-in" title="Linkedin")
+          a(href="#")
+           i(class="fab fa-google-plus-g" title="Google+")
+          a(href="#")
+           i(class="fab fa-pinterest-p" title="Google+")
+
+
+        <!-- Third party js -->
+        script(src="/assets/src/vendors/angular.min.js")
+        script(src="https://code.jquery.com/jquery-2.2.0.min.js")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+
+        <!-- Our application scripts -->
+        script(type="text/javascript" src="/assets/src/main.js")
+        script(type="text/javascript" src="/assets/src/angular/ng-app.js")
+        script(type="text/javascript" src="/assets/src/angular/controllers/list.js")
+
+
+

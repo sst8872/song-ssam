@@ -1,16 +1,17 @@
-extends ../layout
+extends ../layouts/layout
 
 block title
   title Grammar
 
 block content
-  h1 Enjoy your quiz!
+  h1 Review what you have learned!
 
-  .timeCounter
-  #status
+  .container
+    .timeCounter
+    #status
 
-  h2#test_status
-  #test
+    h2#test_status
+    #test
 
   script(type="text/javascript" src="/assets/src/quiz.js")
   script(type="text/javascript" src="/assets/src/q_list.js")

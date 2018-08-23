@@ -1,0 +1,26 @@
+extends ../layouts/ng-layout
+
+block title
+  title Grammar Lectures
+
+block content
+  h1 Study grammar with cool lectures!
+  .container
+    page-header
+      h3.
+        Learn about #[strong English grammar] with ease.
+
+    div(ng-controller='lectureCtrl as lecture')
+      .row
+        .col-sm-6(ng-repeat='turtle in lecture.data')
+          .well.well-sm
+            .row
+              .col-md-6
+                img.img-rounded.img-responsive(src='')
+              .col-md-6
+                h4 {{ turtle.type }}
+                p #[strong Location: {{ turtle.locations }}]
+                p #[strong Size: {{ turtle.size }}]
+                p #[strong Average Lifespan: {{ turtle.lifespan }}]
+                p #[strong Diet: {{ turtle.diet }}]
+
