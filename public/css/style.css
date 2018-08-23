@@ -208,7 +208,7 @@ div.cards256 {
       background: #ff5353; }
 
 /* ----- links ----- */
-#grammarLink {
+.grammarLink {
   display: inline-block;
   color: red;
   font-size: 30px;
