@@ -11,8 +11,12 @@ block content
         Learn about #[strong English grammar] with ease.
 
     div(ng-controller='lectureCtrl as list')
+      form.form-inline.well.well-sm.clearfix
+        span.glyphicon.glyphicon-search
+        input.form-control(type='text' placeholder='Search...'
+                            ng-model='list.search')
       .row
-        .col-sm-6(ng-repeat='lecture in list.data')
+        .col-sm-6(ng-repeat='lecture in list.data | filter:list.search')
           .well.well-sm
             .row
               .col-md-6

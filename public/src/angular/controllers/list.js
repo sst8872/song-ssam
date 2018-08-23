@@ -9,6 +9,7 @@
           vm.data = lectureData;
           vm.activeLecture = {};
           vm.changeActiveLecture = changeActiveLecture;
+          vm.search = '';
 
           function changeActiveLecture(currentLecture) {
               vm.activeLecture = currentLecture;
