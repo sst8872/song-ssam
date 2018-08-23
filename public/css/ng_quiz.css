@@ -1,0 +1,8 @@
+.well-image {
+    width: 100%;
+    height: 162px;
+}
+
+#lecture-info {
+    z-index: 1000000;
+}

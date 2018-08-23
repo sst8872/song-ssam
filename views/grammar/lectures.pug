@@ -10,17 +10,38 @@ block content
       h3.
         Learn about #[strong English grammar] with ease.
 
-    div(ng-controller='lectureCtrl as lecture')
+    div(ng-controller='lectureCtrl as list')
       .row
-        .col-sm-6(ng-repeat='turtle in lecture.data')
+        .col-sm-6(ng-repeat='lecture in list.data')
           .well.well-sm
             .row
               .col-md-6
-                img.img-rounded.img-responsive(src='')
+                img.well-image.img-rounded.img-responsive(ng-src='{{ lecture.image_url }}')
               .col-md-6
-                h4 {{ turtle.type }}
-                p #[strong Location: {{ turtle.locations }}]
-                p #[strong Size: {{ turtle.size }}]
-                p #[strong Average Lifespan: {{ turtle.lifespan }}]
-                p #[strong Diet: {{ turtle.diet }}]
+                h4 {{ lecture.type }}
+                p #[strong Location: {{ lecture.locations }}]
+                p #[strong Size: {{ lecture.size }}]
+                p #[strong Average Lifespan: {{ lecture.lifespan }}]
+                p #[strong Diet: {{ lecture.diet }}]
+                button.btn.btn-primary.pull-right(data-toggle='modal'
+                                                  data-target='#lecture-info'
+                                                  ng-click='list.changeActiveLecture(lecture)') Learn More
 
+      .modal#lecture-info
+        .modal-dialog
+          .modal-content
+            .modal-header
+              h2 {{ list.activeLecture.type }}
+            .modal-body
+              .row
+                .col-xs-8.col-xs-offset-2
+                  img.img-rounded.img-responsive(ng-src="{{ list.activeLecture.image_url }}")
+              .row.top-buffer
+                .col-md-6
+                  p #[strong Locations: {{ list.activeLecture.locations }}]
+                  p #[strong Size: {{ list.activeLecture.size }}]
+                  p #[strong Average Lifespan: {{ list.activeLecture.lifespan }}]
+                  p #[strong Diet: {{ list.activeLecture.diet }}]
+                .col-xs-12.top-buffer
+                  p {{ list.activeLecture.description }}
+                  button.btn.btn-danger.pull-right(data-dismiss='modal') Close

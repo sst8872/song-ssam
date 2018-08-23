@@ -6,11 +6,16 @@
        function LectureController() {
           const vm = this;
 
-          vm.data = turtlesData;
+          vm.data = lectureData;
+          vm.activeLecture = {};
+          vm.changeActiveLecture = changeActiveLecture;
 
+          function changeActiveLecture(currentLecture) {
+              vm.activeLecture = currentLecture;
+          }
        }
 
-    const turtlesData = [
+    const lectureData= [
         {
             type: "Green Turtle",
             image_url: "http://www.what-do-turtles-eat.com/wp-content/uploads/2014/10/Sea-Turtles-Habitat.jpg",
