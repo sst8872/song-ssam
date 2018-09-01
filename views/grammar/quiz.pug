@@ -6,12 +6,14 @@ block title
 block content
   h1 Review what you have learned!
 
-  .container
-    .timeCounter
-    #status
+  .jumbotron(style="background:white;")
+    .card
+      .card-body
+        h2#test_status
+      .card-body
+        .container
+          #test
 
-    h2#test_status
-    #test
 
   script(type="text/javascript" src="/assets/src/quiz.js")
   script(type="text/javascript" src="/assets/src/q_list.js")

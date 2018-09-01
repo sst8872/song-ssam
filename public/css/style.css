@@ -10,7 +10,7 @@ body {
   margin: 0; }
 
 header {
-  background: linear-gradient(#546DFF, #3755FF);
+  background: linear-gradient(#108EE8, #04B2D1);
   height: 80px;
   position: fixed;
   top: 0;
@@ -42,7 +42,7 @@ header {
 
 nav {
   width: 150px;
-  background: linear-gradient(#3755FF, #152CB2);
+  background: linear-gradient(#04B2D1, #108EE8);
   position: fixed;
   right: 0;
   top: 80px;
@@ -55,12 +55,11 @@ nav {
     color: white;
     text-decoration: none;
     font-family: "Josefin Sans", sans-serif;
-    text-shadow: 2px 2px black;
     font-size: 120%;
     border-bottom: solid 1px #152CB2;
     transition: all ease-out .5s; }
     nav a:hover {
-      background-color: #546DFF; }
+      background-color: #05F5DA; }
 
 #nav.hidden {
   right: -160px;
@@ -71,7 +70,7 @@ nav {
   transition: 500ms; }
 
 #nav a.currentPage {
-  background-color: #697eff; }
+  background-color: #D1BD8F; }
 
 #home-login {
   display: block;
