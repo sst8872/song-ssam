@@ -59,7 +59,8 @@ nav {
     border-bottom: solid 1px #152CB2;
     transition: all ease-out .5s; }
     nav a:hover {
-      background-color: #05F5DA; }
+      background-color: #05F5DA;
+      text-decoration: none;}
 
 #nav.hidden {
   right: -160px;
